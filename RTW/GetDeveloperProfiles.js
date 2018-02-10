@@ -23,16 +23,14 @@ exports.handler = function (event, context, callback) {
 	}, function (err, data) {
 		if (err) {
 			console.log(err);
-			return callback(null, failure);
+			callback(null, failure);
 		} else {
 			console.log('da data is ' + data)
 			console.log('it fuckin worked! ', JSON.stringify(data));
 			success.body = JSON.stringify(data);
 			console.log('this is success . body ' + success.body);
-			return callback(null, success);
+			callback(null, success);
 		}
 	});
 
-
-	callback(null, 'Successfully executed');
 }
