@@ -5,7 +5,8 @@ exports.handler = function (event, context, callback) {
 	const success = {
 		"statusCode": 200,
 		"headers": {
-			"Access-Control-Allow-Origin": "*"
+			"Access-Control-Allow-Origin": "*",
+			"Content-Type": "text/plain"
 		},
 		"body": "..."
 	}
