@@ -5,8 +5,7 @@ exports.handler = function (event, context, callback) {
 	const success = {
 		"statusCode": 200,
 		"headers": {
-			"Access-Control-Allow-Origin": "*",
-			"Content-Type": "application/json"
+			"Access-Control-Allow-Origin": "*"
 		},
 		"body": "..."
 	}
@@ -28,6 +27,7 @@ exports.handler = function (event, context, callback) {
 			console.log('da data is ' + data)
 			console.log('it fuckin worked! ', JSON.stringify(data));
 			success.body = JSON.stringify(data);
+			console.log('this is success . body ' + success.body);
 			return callback(null, success);
 		}
 	});
